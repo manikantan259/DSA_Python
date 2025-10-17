@@ -1,0 +1,74 @@
+###if array is sorted###
+
+
+
+
+def twoSum(arr , target):
+    
+    left , right = 0 , len(arr)-1
+    
+    while left < right :
+        
+        calSum = arr[left] + arr[right] 
+        print (calSum)
+        if calSum ==  target :
+            return [left , right]
+            
+        elif calSum < target:
+            left +=1
+        else :
+            right -=1
+            
+    return []
+    
+arr = [2,7,11,15]   
+print (twoSum(arr , 9))
+
+
+##array isn't sorted##
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("TWO SUM")
+
+
+def twoSum(arr , target):
+    
+    dictMap = {}
+    
+    for i in range (0 , len(arr)):
+        diff = target - arr[i]
+        
+        if diff in dictMap:
+            return [dictMap[diff] , i]
+        dictMap [arr[i]] = i
+        
+    return []
+   
+    
+arr = [15, 2, 11, 7]   
+print (twoSum(arr , 9))
+            
+        
+            
+        
+            
+    
+        
+        
+
+
+
+
+
+
+
+
+            
+        
+            
+        
+            
+    
+        
+        
